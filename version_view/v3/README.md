@@ -1,2 +1,2 @@
-Fixed Block Loop
-Fixed Game End
+* Fixed Block Loop
+* Fixed Game End

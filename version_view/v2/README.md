@@ -1,3 +1,3 @@
-Fixed Spelling Err
-Added Reset
-Added New Blocks
+* Fixed Spelling Err
+* Added Reset
+* Added New Blocks
