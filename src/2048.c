@@ -342,7 +342,7 @@ get_wait:
     new_block = rand() % 16;
     if(num[new_block] != 0) goto get_wait;
 #ifdef _WIN32
-    sleep(100);
+    Sleep(100);
 #else
     system("sleep 0.1");
 #endif
