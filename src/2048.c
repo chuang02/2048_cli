@@ -73,7 +73,7 @@ void draw_canvas()
     printf("\033[m");
     printf("2048 CLI V6\n");
     printf("Built by Coder-BTS\n\n");
-    printf("Use <HJKL> | E-Exit | R-Reset\n\n");
+    printf("Use <HJKL> | E-Exit | R-Reset\n");
     printf("\033[0;33m");
     printf("-----------------------------\n");
     printf("|      |      |      |      |\n");
@@ -159,11 +159,11 @@ void draw_canvas()
         express++;
     }while(express < 16);
     printf("\n|      |      |      |      |\n");
-    printf("-----------------------------\n\033[m");
-    printf(">>> Score:   %d <<<\n",score);
+    printf("-----------------------------\n");
+    printf(">>> Score:   %d <<<\033[m\n",score);
     if(check() == 1)
     {
-        printf("\n\nCan you make a forward move?\n");
+        printf("\n\033[1;32mCan you make a forward move?\n");
     }
     printf("\033[m");
 }
