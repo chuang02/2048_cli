@@ -1,4 +1,4 @@
-// 2048 GAME V5
+// 2048 GAME V6
 // BY BTS
 
 #include <stdio.h>
@@ -70,15 +70,28 @@ void draw_canvas()
 #endif
     int express;
     express = 0;
-    printf("2048 CLI V5\n");
+    printf("\033[m");
+    printf("2048 CLI V6\n");
     printf("Built by Coder-BTS\n\n");
     printf("Use <HJKL> | E-Exit | R-Reset\n\n");
+    printf("\033[0;33m");
     printf("-----------------------------\n");
     printf("|      |      |      |      |\n");
     printf("|");
     do
     {
-        if(num[express] != 0) printf(" %4d |",num[express]);
+        if(num[express] == 2) printf(" \033[m%4d\033[0;33m |",num[express]);
+        if(num[express] == 4) printf(" \033[0;32;32m%4d\033[0;33m |",num[express]);
+        if(num[express] == 8) printf(" \033[1;32m%4d\033[0;33m |",num[express]);
+        if(num[express] == 16) printf(" \033[0;32;34m%4d\033[0;33m |",num[express]);
+        if(num[express] == 32) printf(" \033[0;35m%4d\033[0;33m |",num[express]);
+        if(num[express] == 64) printf(" \033[1;35m%4d\033[0;33m |",num[express]);
+        if(num[express] == 128) printf(" \033[0;32;31m%4d\033[0;33m |",num[express]);
+        if(num[express] == 256) printf(" \033[1;31m%4d\033[0;33m |",num[express]);
+        if(num[express] == 512) printf(" \033[0;33m%4d\033[0;33m |",num[express]);
+        if(num[express] == 1024) printf(" \033[1;30m%4d\033[0;33m |",num[express]);
+        if(num[express] == 2048) printf(" \033[0;37m%4d\033[0;33m |",num[express]);
+        if(num[express] == 4096) printf(" \033[1;34m%4d\033[0;33m |",num[express]);
         if(num[express] == 0) printf("      |",num[express]);
         express++;
     }while(express < 4);
@@ -88,7 +101,18 @@ void draw_canvas()
     printf("|");
     do
     {
-        if(num[express] != 0) printf(" %4d |",num[express]);
+        if(num[express] == 2) printf(" \033[m%4d\033[0;33m |",num[express]);
+        if(num[express] == 4) printf(" \033[0;32;32m%4d\033[0;33m |",num[express]);
+        if(num[express] == 8) printf(" \033[1;32m%4d\033[0;33m |",num[express]);
+        if(num[express] == 16) printf(" \033[0;32;34m%4d\033[0;33m |",num[express]);
+        if(num[express] == 32) printf(" \033[0;35m%4d\033[0;33m |",num[express]);
+        if(num[express] == 64) printf(" \033[1;35m%4d\033[0;33m |",num[express]);
+        if(num[express] == 128) printf(" \033[0;32;31m%4d\033[0;33m |",num[express]);
+        if(num[express] == 256) printf(" \033[1;31m%4d\033[0;33m |",num[express]);
+        if(num[express] == 512) printf(" \033[0;33m%4d\033[0;33m |",num[express]);
+        if(num[express] == 1024) printf(" \033[1;30m%4d\033[0;33m |",num[express]);
+        if(num[express] == 2048) printf(" \033[0;37m%4d\033[0;33m |",num[express]);
+        if(num[express] == 4096) printf(" \033[1;34m%4d\033[0;33m |",num[express]);
         if(num[express] == 0) printf("      |",num[express]);
         express++;
     }while(express < 8);
@@ -98,7 +122,18 @@ void draw_canvas()
     printf("|");
     do
     {
-        if(num[express] != 0) printf(" %4d |",num[express]);
+        if(num[express] == 2) printf(" \033[m%4d\033[0;33m |",num[express]);
+        if(num[express] == 4) printf(" \033[0;32;32m%4d\033[0;33m |",num[express]);
+        if(num[express] == 8) printf(" \033[1;32m%4d\033[0;33m |",num[express]);
+        if(num[express] == 16) printf(" \033[0;32;34m%4d\033[0;33m |",num[express]);
+        if(num[express] == 32) printf(" \033[0;35m%4d\033[0;33m |",num[express]);
+        if(num[express] == 64) printf(" \033[1;35m%4d\033[0;33m |",num[express]);
+        if(num[express] == 128) printf(" \033[0;32;31m%4d\033[0;33m |",num[express]);
+        if(num[express] == 256) printf(" \033[1;31m%4d\033[0;33m |",num[express]);
+        if(num[express] == 512) printf(" \033[0;33m%4d\033[0;33m |",num[express]);
+        if(num[express] == 1024) printf(" \033[1;30m%4d\033[0;33m |",num[express]);
+        if(num[express] == 2048) printf(" \033[0;37m%4d\033[0;33m |",num[express]);
+        if(num[express] == 4096) printf(" \033[1;34m%4d\033[0;33m |",num[express]);
         if(num[express] == 0) printf("      |",num[express]);
         express++;
     }while(express < 12);
@@ -108,17 +143,29 @@ void draw_canvas()
     printf("|");
     do
     {
-        if(num[express] != 0) printf(" %4d |",num[express]);
+        if(num[express] == 2) printf(" \033[m%4d\033[0;33m |",num[express]);
+        if(num[express] == 4) printf(" \033[0;32;32m%4d\033[0;33m |",num[express]);
+        if(num[express] == 8) printf(" \033[1;32m%4d\033[0;33m |",num[express]);
+        if(num[express] == 16) printf(" \033[0;32;34m%4d\033[0;33m |",num[express]);
+        if(num[express] == 32) printf(" \033[0;35m%4d\033[0;33m |",num[express]);
+        if(num[express] == 64) printf(" \033[1;35m%4d\033[0;33m |",num[express]);
+        if(num[express] == 128) printf(" \033[0;32;31m%4d\033[0;33m |",num[express]);
+        if(num[express] == 256) printf(" \033[1;31m%4d\033[0;33m |",num[express]);
+        if(num[express] == 512) printf(" \033[0;33m%4d\033[0;33m |",num[express]);
+        if(num[express] == 1024) printf(" \033[1;30m%4d\033[0;33m |",num[express]);
+        if(num[express] == 2048) printf(" \033[0;37m%4d\033[0;33m |",num[express]);
+        if(num[express] == 4096) printf(" \033[1;34m%4d\033[0;33m |",num[express]);
         if(num[express] == 0) printf("      |",num[express]);
         express++;
     }while(express < 16);
     printf("\n|      |      |      |      |\n");
-    printf("-----------------------------\n");
+    printf("-----------------------------\n\033[m");
     printf(">>> Score:   %d <<<\n",score);
     if(check() == 1)
     {
         printf("\n\nCan you make a forward move?\n");
     }
+    printf("\033[m");
 }
 
 void bakup()

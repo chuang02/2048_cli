@@ -3,9 +3,9 @@ A terminal version of 2048
 
 !["ScreenShot"](/screenshot.png)
 
-* **[V5 Version is stable, V6 is testing, V5.1 is paused, else are full of bugs]**
-* **[V5 Version is stable, V6 is testing, V5.1 is paused, else are full of bugs]**
-* **[V5 Version is stable, V6 is testing, V5.1 is paused, else are full of bugs]**
+* **[V6 is Released! Added Block Color!]**
+* **[V6 is Released! Added Block Color!]**
+* **[V6 is Released! Added Block Color!]**
 
 Using **H J K L** to move blocks *(Linux support direction keys, Windows untested)*
 
