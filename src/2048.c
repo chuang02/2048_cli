@@ -13,7 +13,7 @@
 #endif
 
 int num[16];
-int num_v[16];//Compairation
+int num_v[16];//comparation
 char direct;
 int check();
 int signal;
@@ -41,10 +41,10 @@ char get1char(void)
     if(c == 0)
     {
         c = getch();
-        if(c == 75) c = 'h';
-        if(c == 80) c = 'j';
-        if(c == 72) c = 'k';
-        if(c == 77) c = 'l';
+        if(c == 50) c = 'h';
+        if(c == 51) c = 'j';
+        if(c == 52) c = 'k';
+        if(c == 4F) c = 'l';
     }
 #else 
     c = getchar();
@@ -185,7 +185,7 @@ void bakup()
     }
 }
 
-int compair()
+int compare()
 {
     int k;
     for(k = 0;k < 16;k++)
@@ -264,7 +264,7 @@ to_right:
             }
         }
     }
-    if(compair() == 0) goto get_wait;
+    if(compare() == 0) goto get_wait;
     bakup();
     signal = 1;
     goto to_right;
@@ -289,7 +289,7 @@ to_left:
             }
         }
     }
-    if(compair() == 0) goto get_wait;
+    if(compare() == 0) goto get_wait;
     bakup();
     signal = 1;
     goto to_left;
@@ -314,7 +314,7 @@ to_up:
             }
         }
     }
-    if(compair() == 0) goto get_wait;
+    if(compare() == 0) goto get_wait;
     bakup();
     signal = 1;
     goto to_up;
@@ -339,7 +339,7 @@ to_down:
             }
         }
     }
-    if(compair() == 0) goto get_wait;
+    if(compare() == 0) goto get_wait;
     bakup();
     signal = 1;
     goto to_down;
