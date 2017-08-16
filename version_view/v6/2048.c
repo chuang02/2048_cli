@@ -38,6 +38,14 @@ char get1char(void)
     int express;
 #ifdef _WIN32
     c = getch();
+    if(c == 0)
+    {
+        c = getch();
+        if(c == 75) c = 'h';
+        if(c == 80) c = 'j';
+        if(c == 72) c = 'k';
+        if(c == 77) c = 'l';
+    }
 #else 
     c = getchar();
     putchar('\b'); 
