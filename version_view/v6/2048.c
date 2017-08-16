@@ -38,13 +38,13 @@ char get1char(void)
     int express;
 #ifdef _WIN32
     c = getch();
-    if(c == 0)
+    if(c == -32)
     {
         c = getch();
-        if(c == 50) c = 'h';
-        if(c == 51) c = 'j';
-        if(c == 52) c = 'k';
-        if(c == 4F) c = 'l';
+        if(c == 75) c = 104;
+        if(c == 80) c = 106;
+        if(c == 72) c = 107;
+        if(c == 77) c = 108;
     }
 #else 
     c = getchar();
