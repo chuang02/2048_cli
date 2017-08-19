@@ -18,6 +18,7 @@ char direct;
 int check();
 int signal;
 int score;
+int express;
 
 char get1char(void)
 {
@@ -69,6 +70,27 @@ int rnd(int x)
     return 0;
 }
 
+int color_printf(int x)
+{
+    do
+    {
+        if(num[express] == 2) printf(" \033[m%4d\033[0;33m |",num[express]);
+        if(num[express] == 4) printf(" \033[0;32;32m%4d\033[0;33m |",num[express]);
+        if(num[express] == 8) printf(" \033[1;32m%4d\033[0;33m |",num[express]);
+        if(num[express] == 16) printf(" \033[0;32;34m%4d\033[0;33m |",num[express]);
+        if(num[express] == 32) printf(" \033[0;35m%4d\033[0;33m |",num[express]);
+        if(num[express] == 64) printf(" \033[1;35m%4d\033[0;33m |",num[express]);
+        if(num[express] == 128) printf(" \033[0;32;31m%4d\033[0;33m |",num[express]);
+        if(num[express] == 256) printf(" \033[1;31m%4d\033[0;33m |",num[express]);
+        if(num[express] == 512) printf(" \033[0;33m%4d\033[0;33m |",num[express]);
+        if(num[express] == 1024) printf(" \033[1;30m%4d\033[0;33m |",num[express]);
+        if(num[express] == 2048) printf(" \033[0;37m%4d\033[0;33m |",num[express]);
+        if(num[express] == 4096) printf(" \033[1;34m%4d\033[0;33m |",num[express]);
+        if(num[express] == 0) printf("      |",num[express]);
+        express++;
+    }while(express < x);
+}
+
 void draw_canvas()
 {
 #ifdef _WIN32
@@ -76,7 +98,6 @@ void draw_canvas()
 #else
     system("clear");//clear screen
 #endif
-    int express;
     express = 0;
     printf("\033[m");
     printf("2048 CLI V6\n");
@@ -86,86 +107,22 @@ void draw_canvas()
     printf("-----------------------------\n");
     printf("|      |      |      |      |\n");
     printf("|");
-    do
-    {
-        if(num[express] == 2) printf(" \033[m%4d\033[0;33m |",num[express]);
-        if(num[express] == 4) printf(" \033[0;32;32m%4d\033[0;33m |",num[express]);
-        if(num[express] == 8) printf(" \033[1;32m%4d\033[0;33m |",num[express]);
-        if(num[express] == 16) printf(" \033[0;32;34m%4d\033[0;33m |",num[express]);
-        if(num[express] == 32) printf(" \033[0;35m%4d\033[0;33m |",num[express]);
-        if(num[express] == 64) printf(" \033[1;35m%4d\033[0;33m |",num[express]);
-        if(num[express] == 128) printf(" \033[0;32;31m%4d\033[0;33m |",num[express]);
-        if(num[express] == 256) printf(" \033[1;31m%4d\033[0;33m |",num[express]);
-        if(num[express] == 512) printf(" \033[0;33m%4d\033[0;33m |",num[express]);
-        if(num[express] == 1024) printf(" \033[1;30m%4d\033[0;33m |",num[express]);
-        if(num[express] == 2048) printf(" \033[0;37m%4d\033[0;33m |",num[express]);
-        if(num[express] == 4096) printf(" \033[1;34m%4d\033[0;33m |",num[express]);
-        if(num[express] == 0) printf("      |",num[express]);
-        express++;
-    }while(express < 4);
+    color_printf(4);
     printf("\n|      |      |      |      |\n");
     printf("-----------------------------\n");
     printf("|      |      |      |      |\n");
     printf("|");
-    do
-    {
-        if(num[express] == 2) printf(" \033[m%4d\033[0;33m |",num[express]);
-        if(num[express] == 4) printf(" \033[0;32;32m%4d\033[0;33m |",num[express]);
-        if(num[express] == 8) printf(" \033[1;32m%4d\033[0;33m |",num[express]);
-        if(num[express] == 16) printf(" \033[0;32;34m%4d\033[0;33m |",num[express]);
-        if(num[express] == 32) printf(" \033[0;35m%4d\033[0;33m |",num[express]);
-        if(num[express] == 64) printf(" \033[1;35m%4d\033[0;33m |",num[express]);
-        if(num[express] == 128) printf(" \033[0;32;31m%4d\033[0;33m |",num[express]);
-        if(num[express] == 256) printf(" \033[1;31m%4d\033[0;33m |",num[express]);
-        if(num[express] == 512) printf(" \033[0;33m%4d\033[0;33m |",num[express]);
-        if(num[express] == 1024) printf(" \033[1;30m%4d\033[0;33m |",num[express]);
-        if(num[express] == 2048) printf(" \033[0;37m%4d\033[0;33m |",num[express]);
-        if(num[express] == 4096) printf(" \033[1;34m%4d\033[0;33m |",num[express]);
-        if(num[express] == 0) printf("      |",num[express]);
-        express++;
-    }while(express < 8);
+    color_printf(8);
     printf("\n|      |      |      |      |\n");
     printf("-----------------------------\n");
     printf("|      |      |      |      |\n");
     printf("|");
-    do
-    {
-        if(num[express] == 2) printf(" \033[m%4d\033[0;33m |",num[express]);
-        if(num[express] == 4) printf(" \033[0;32;32m%4d\033[0;33m |",num[express]);
-        if(num[express] == 8) printf(" \033[1;32m%4d\033[0;33m |",num[express]);
-        if(num[express] == 16) printf(" \033[0;32;34m%4d\033[0;33m |",num[express]);
-        if(num[express] == 32) printf(" \033[0;35m%4d\033[0;33m |",num[express]);
-        if(num[express] == 64) printf(" \033[1;35m%4d\033[0;33m |",num[express]);
-        if(num[express] == 128) printf(" \033[0;32;31m%4d\033[0;33m |",num[express]);
-        if(num[express] == 256) printf(" \033[1;31m%4d\033[0;33m |",num[express]);
-        if(num[express] == 512) printf(" \033[0;33m%4d\033[0;33m |",num[express]);
-        if(num[express] == 1024) printf(" \033[1;30m%4d\033[0;33m |",num[express]);
-        if(num[express] == 2048) printf(" \033[0;37m%4d\033[0;33m |",num[express]);
-        if(num[express] == 4096) printf(" \033[1;34m%4d\033[0;33m |",num[express]);
-        if(num[express] == 0) printf("      |",num[express]);
-        express++;
-    }while(express < 12);
+    color_printf(12);
     printf("\n|      |      |      |      |\n");
     printf("-----------------------------\n");
     printf("|      |      |      |      |\n");
     printf("|");
-    do
-    {
-        if(num[express] == 2) printf(" \033[m%4d\033[0;33m |",num[express]);
-        if(num[express] == 4) printf(" \033[0;32;32m%4d\033[0;33m |",num[express]);
-        if(num[express] == 8) printf(" \033[1;32m%4d\033[0;33m |",num[express]);
-        if(num[express] == 16) printf(" \033[0;32;34m%4d\033[0;33m |",num[express]);
-        if(num[express] == 32) printf(" \033[0;35m%4d\033[0;33m |",num[express]);
-        if(num[express] == 64) printf(" \033[1;35m%4d\033[0;33m |",num[express]);
-        if(num[express] == 128) printf(" \033[0;32;31m%4d\033[0;33m |",num[express]);
-        if(num[express] == 256) printf(" \033[1;31m%4d\033[0;33m |",num[express]);
-        if(num[express] == 512) printf(" \033[0;33m%4d\033[0;33m |",num[express]);
-        if(num[express] == 1024) printf(" \033[1;30m%4d\033[0;33m |",num[express]);
-        if(num[express] == 2048) printf(" \033[0;37m%4d\033[0;33m |",num[express]);
-        if(num[express] == 4096) printf(" \033[1;34m%4d\033[0;33m |",num[express]);
-        if(num[express] == 0) printf("      |",num[express]);
-        express++;
-    }while(express < 16);
+    color_printf(16);
     printf("\n|      |      |      |      |\n");
     printf("-----------------------------\n");
     printf(">>> Score:   %d <<<\033[m\n",score);

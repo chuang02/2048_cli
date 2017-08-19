@@ -4,3 +4,4 @@ This is Version 6 **[V6]**
 * Fixed Windows Delay on Blocks
 * Fixed Windows Direction Keys
 * Fixed Spelling Error
+* Improved Code
