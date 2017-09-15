@@ -2,9 +2,9 @@
 A terminal version of 2048
 
 
-* **[V6 is Released! Added Block Color! ]**
-* **[V6 is Released! Added Block Color! ]**
-* **[V6 is Released! Added Block Color! ]**
+* **[V7 is Released! Added Cheat! ]**
+* **[V7 is Released! Added Cheat! ]**
+* **[V7 is Released! Added Cheat! ]**
 
 > Using **H J K L** to move blocks *(Linux support direction keys, Windows untested)*
 

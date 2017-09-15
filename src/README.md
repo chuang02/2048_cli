@@ -1,7 +1,3 @@
-This is Version 6 **[V6]**
+This is Version 7 **[V7]**
 
-* Added Block Color
-* Fixed Windows Delay on Blocks
-* Fixed Windows Direction Keys
-* Fixed Spelling Error
-* Improved Code
+* Added Cheat
