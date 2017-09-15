@@ -331,7 +331,7 @@ cheat_x:
     num[13] = 0;
     num[14] = 16;
     num[15] = 256;
-    score = 6774968;
+    score = 67108864;
     goto get_wait;
 quit_g:
     exit(1);
