@@ -6,7 +6,7 @@ A terminal version of 2048
 * **[V7 is Released! Added Cheat! ]**
 * **[V7 is Released! Added Cheat! ]**
 
-> Using **H J K L** to move blocks *(Linux support direction keys, Windows untested)*
+> Using **H J K L** to move blocks, also support direction keys
 
 > Using **E** to exit | Using **R** to reset
 
